@@ -93,7 +93,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://wilberthvers05.wixstudio.io/my-site-6"
 ]
 
-#CORS_ALLOW_ALL_ORIGINS = True 
+CORS_ALLOW_ALL_ORIGINS = True 
 
 WSGI_APPLICATION = 'product_project.wsgi.application'
 
