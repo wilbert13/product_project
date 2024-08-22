@@ -23,17 +23,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%1ikci^x5*k18$&5k-qj!-ykt^+pya3oj$p&)3xtru6auenac7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True  
 
 ALLOWED_HOSTS = ['wilberthvers05.wixstudio.io','product-project-umo7.onrender.com', '127.0.0.1', 'localhost']
 
 # Configuraciones de Seguridad para Producción
-SECURE_SSL_REDIRECT = True
-SECURE_HSTS_SECONDS = 31536000
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_SSL_REDIRECT = False
+SECURE_HSTS_SECONDS = 0
+SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+SECURE_HSTS_PRELOAD = False
+SECURE_BROWSER_XSS_FILTER = False
+SECURE_CONTENT_TYPE_NOSNIFF = False
 SECURE_REFERRER_POLICY = 'strict-origin-when-cross-origin'
 X_FRAME_OPTIONS = 'DENY'
 
@@ -92,7 +92,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://wilberthvers05.wixstudio.io",
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True 
+#CORS_ALLOW_ALL_ORIGINS = True 
 
 WSGI_APPLICATION = 'product_project.wsgi.application'
 
