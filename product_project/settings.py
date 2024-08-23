@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%1ikci^x5*k18$&5k-qj!-ykt^+pya3oj$p&)3xtru6auenac7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  
+DEBUG = True
 
 ALLOWED_HOSTS = ['wilberthvers05.wixstudio.io','product-project-umo7.onrender.com', '127.0.0.1', 'localhost']
 
@@ -90,7 +91,6 @@ TEMPLATES = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://wilberthvers05.wixstudio.io",
-    "https://wilberthvers05.wixstudio.io/my-site-6"
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True 
@@ -150,6 +150,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

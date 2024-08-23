@@ -19,6 +19,8 @@ from django.http import HttpResponseRedirect
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from products.views import ProductCreateView, ProductListCreateView, ProductListView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,3 +28,6 @@ urlpatterns = [
     path('api/products/', ProductListCreateView.as_view(), name='product-list-create'),
     path('api/products/create/', ProductCreateView.as_view(), name='product-create'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
